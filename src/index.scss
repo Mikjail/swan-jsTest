@@ -1,0 +1,15 @@
+/* ============= HTML/BODY ============= */
+body,
+html,
+.ng-isolate-scope,
+.root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height:auto;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: Helvetica;
+  font-style: normal;
+}
