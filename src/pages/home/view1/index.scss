@@ -3,6 +3,13 @@
     .card-title{
         font-weight: 600;
     }
+    .card-body{
+        .card-btn-container{
+            display:flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+    }
     .card-text-container{
         height: 100px;
         .card-text{
@@ -14,9 +21,20 @@
             /* autoprefixer: on */
             -webkit-line-clamp: 4;
         }
-        table{
-            th{
-                font-size: 14px;
+       
+    }
+    .card-footer{
+        text-align: center;
+        hr{
+            margin: 5px 0px;
+        }
+        .card-footer-body{
+            table{
+                width: 100%;
+                th{
+                    font-size: 14px;
+                    padding: 10px 0px;
+                }
             }
         }
     }

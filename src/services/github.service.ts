@@ -16,6 +16,18 @@ class GithubService {
       console.log(error)
     }
   }
+
+  async fetchIssueList(value) {
+    try {
+
+      const {data} = await this.http.get(`https://api.github.com/search/issues?q=repo:${value}`)
+
+      return data
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 
 export default GithubService

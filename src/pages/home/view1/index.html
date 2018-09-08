@@ -6,24 +6,27 @@
                 <div class="card-text-container">
                         <p class="card-text">{{item.description}}</p>
                 </div>
-               
-                <a href="#" class="btn btn-primary">View More</a>
+               <div class="card-btn-container">
+                    <a href={{item.url}} ui-sref-active="active" class="btn btn-primary">View More</a>
+                    <a href="#" ui-sref="issueList({ issueId: item.full_name })" ui-sref-active class="btn btn-info">{{item.open_issues_count}} Issues</a>
+               </div>
             </div>
             <div class="card-footer">
                 <div class="card-footer-title">
                     <i class="fab fa-github"></i>
                     <strong>Github Details</strong>
                 </div>    
+                <hr>
                 <div class="card-footer-body">
-                    <table class="table">
+                    <table>
                         <thead>
-                            <th>Issues</th>
+                            <th>Watchers</th>
                             <th>Forks</th>
                             <th>Stargazers</th>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{item.open_issues_count}}</td>
+                                <td>{{item.watchers_count}}</td>
                                 <td>{{item.forks_count}}</td>
                                 <td>{{item.stargazers_count}}</td>
                             </tr>

@@ -1,0 +1,46 @@
+
+<section class="issuelist-section">
+        <a hrfe="#" class="btn btn-primary btn-back"  ui-sref="home">
+                Back
+        </a>
+    <div class="title">
+        <div class="title-left">
+                <i class="fab fa-github fa-3x"></i>
+                <span class="header-text">{{$ctrl.title}}</span>
+        </div>
+       <div class="title-right">
+            <span class="subheader-text">
+                    Issues: 
+                   {{$ctrl.issues.total_count}}
+               </span>
+       </div>
+       
+    </div>
+    <div id="accordion" ng-repeat="item in $ctrl.issues.items">
+        <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+            <button class="btn btn-link issue-btn-title" data-toggle="collapse" data-target="#{{item.number}}" aria-expanded="true" aria-controls="{{item.number}}">
+                    <span class="issue-id"> Issue #{{item.number}}</span>
+                <span class="issue-title"> -  {{item.title}}</span>
+               
+            </button>
+            </h5>
+        </div>
+    
+        <div id="{{item.number}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <div class="card-body-user">
+                     <label for="">User:</label> {{item.user.login}} <a href="{{item.user.html_url}}"><i class="fab fa-github"></i></a> <br>
+                     <label for="">Created at :</label> {{item.created_at | date}} <br>
+                     <label for="">Closed at: </label> {{item.closed_at | date}}
+                </div>
+                <div class="card-body-comment">
+                       <p>{{item.body}}</p> 
+                </div>
+               
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
