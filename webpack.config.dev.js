@@ -6,7 +6,7 @@ let path = require('path'),
 const ROOT_PATH = path.resolve(__dirname), 
   APP_PATH = path.resolve(ROOT_PATH, 'src'), 
   BUILD_PATH = path.resolve(ROOT_PATH, 'dist'), 
-  NODE_MODULES_PATH = path.resolve(ROOT_PATH, 'node_modules'), /
+  NODE_MODULES_PATH = path.resolve(ROOT_PATH, 'node_modules'),
   ENTRY_FILE = path.resolve(APP_PATH, 'index'), 
   TEMPLATE_FILE = path.resolve(APP_PATH, 'index.html'); 
 
