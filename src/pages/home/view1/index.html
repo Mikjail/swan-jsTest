@@ -2,9 +2,35 @@
     <div class="col-md-4 " ng-repeat="item in $ctrl.listRepo">
         <div class="card card-container" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">{{item.name}}</h5>
+                <div class="card-text-container">
+                        <p class="card-text">{{item.description}}</p>
+                </div>
+               
+                <a href="#" class="btn btn-primary">View More</a>
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-title">
+                    <i class="fab fa-github"></i>
+                    <strong>Github Details</strong>
+                </div>    
+                <div class="card-footer-body">
+                    <table class="table">
+                        <thead>
+                            <th>Issues</th>
+                            <th>Forks</th>
+                            <th>Stargazers</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{item.open_issues_count}}</td>
+                                <td>{{item.forks_count}}</td>
+                                <td>{{item.stargazers_count}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>

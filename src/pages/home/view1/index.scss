@@ -1,3 +1,23 @@
 .card-container{
     margin-bottom: 15px;
+    .card-title{
+        font-weight: 600;
+    }
+    .card-text-container{
+        height: 100px;
+        .card-text{
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+           /* autoprefixer: off */
+            -webkit-box-orient: vertical;
+            /* autoprefixer: on */
+            -webkit-line-clamp: 4;
+        }
+        table{
+            th{
+                font-size: 14px;
+            }
+        }
+    }
 }
