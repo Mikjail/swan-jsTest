@@ -1,21 +1,28 @@
 <div class="home">
-    <section class="row col-lg-6 section">
-        <div class="title-section">
-            <h1>Github Searcher</h1>
-        </div>
-    </section>
-    <section class="row section">
-        <div class="col-lg-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." ng-model="$ctrl.searchValue">
-            <span class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="button" ng-click="$ctrl.handleSubmit()">Search</button>
-              </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-6">
-      </div><!-- /.row -->
-    </section>
+  <div class="github-search-container section">
+      <section class="row col-lg-6 section">
+          <div class="title-section">
+              <h1>Github Finder</h1>
+          </div>
+      </section>
+      <section class="row section">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for..." ng-model="$ctrl.searchValue">
+              <span class="input-group-btn">
+                  <button ng-if="!$ctrl.isLoading"  ng-disabled="$ctrl.searchValue==''" class="btn btn-default btn-primary" type="button" ng-click="$ctrl.handleSubmit()">Search</button>
+                  <i ng-if="$ctrl.isLoading" class="fas fa-spinner fa-spin" style="margin: 10px;"></i>  
+                </span>
+            </div>
+            <!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+        </div><!-- /.row -->
+      </section>  
+  </div>
     
   <view1 ng-if="$ctrl.listRepo.length > 0"></view1>
+  <div class="alert alert-danger" role="alert"  ng-if="$ctrl.notFound">
+      No repositories found. Try with another name
+  </div>
 </div>

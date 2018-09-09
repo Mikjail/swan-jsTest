@@ -7,7 +7,7 @@
                         <p class="card-text">{{item.description}}</p>
                 </div>
                <div class="card-btn-container">
-                    <a href={{item.url}} ui-sref-active="active" class="btn btn-primary">View More</a>
+                    <a href={{item.owner.html_url}} ui-sref-active="active" class="btn btn-primary">View More</a>
                     <a href="#" ui-sref="issueList({ issueId: item.full_name })" ui-sref-active class="btn btn-info">{{item.open_issues_count}} Issues</a>
                </div>
             </div>

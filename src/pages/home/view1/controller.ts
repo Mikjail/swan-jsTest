@@ -34,13 +34,4 @@ export default class ListRepoController {
                 watchers_count }
         })
     }
-
-    viewOpenIssues(repo) {
-        let url = 'https://api.github.com/search/issues?q=rep o:'
-        console.log(`${url}${repo}`)
-        this.state.go('issueList', {
-            url: '/issueList',
-            templateUrl : '../../issueList',
-        })
-    }
 }
