@@ -1,6 +1,8 @@
-# angularjs-ts-boilerplate
+# Black Swan Data - Github Finder.
 
-A boilerplate using typescript to develop angularjs. [introduction](https://github.com/youngluo/angularjs-ts-boilerplate/blob/master/introduction.md)
+## Contains 2 views:
+  1. Home (Github Finder).
+  2. Issue Lists.
 
 ## dependencies
 
@@ -10,9 +12,9 @@ A boilerplate using typescript to develop angularjs. [introduction](https://gith
 
 ## usage
 
-	git clone --depth=1 https://github.com/youngluo/angularjs-ts-boilerplate.git your-project-name
+	git clone https://github.com/Mikjail/swan-jsTest.gityour-project-name
 
-	cd your-project-name
+	cd folder-name
 
 	npm install
 

@@ -67,7 +67,7 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 8192, //limit的参数，当你图片大小小于这个限制的时候，会自动启用base64编码图片
+            limit: 8192, 
             name: 'images/[name].[hash:8].[ext]'
           }
         },
@@ -96,9 +96,9 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new HtmlWebpackPlugin({  //根据模板插入css/js等生成最终HTML
-      filename: path.resolve(BUILD_PATH, 'index.html'), //生成的html存放路径
-      template: TEMPLATE_FILE, //html模板路径
+    new HtmlWebpackPlugin({ 
+      filename: path.resolve(BUILD_PATH, 'index.html'), 
+      template: TEMPLATE_FILE, 
       hash: false,
     }),
     new ExtractTextPlugin({
@@ -108,6 +108,6 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.ts', '.less', '.scss', '.css'], //后缀名自动补全
+    extensions: ['.js', '.ts', '.less', '.scss', '.css'], 
   }
 }
